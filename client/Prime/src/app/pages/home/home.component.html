@@ -1,31 +1,71 @@
 <app-navbar></app-navbar>
 <section id="home">
-<!-- Home Section -->
-<div class="relative w-full h-[50vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]"
-style="margin-top: -100px;"
->
-  <!-- Video Background -->
-  <iframe class="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://www.youtube.com/embed/uLwWx4eh4t0?autoplay=1&mute=1&loop=1&playlist=uLwWx4eh4t0"
-          frameborder="0"
-          width="1206"
-          allow="autoplay; fullscreen"
-          allowfullscreen>
-  </iframe>
-  <div class="absolute top-0 left-0 w-full h-full opacity-80 z-20"
-       style="background-color: rgb(13, 13, 13);">
-  </div>
-  <!-- Overlay Content -->
-  <div class="relative z-30 items-center justify-center h-full text-white text-center">
-      <!-- content goes here -->
-  </div>
-</div>
+  <!-- Home Section -->
+  <div
+    class="relative w-full min-h-screen overflow-hidden"
+    style="margin-top: -80px"
+  >
+    <!-- Video Background -->
+    <iframe
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/uLwWx4eh4t0?autoplay=1&mute=1&loop=1&playlist=uLwWx4eh4t0"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
+    
+    <!-- Dark Overlay -->
+    <div
+      class="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-20"
+    ></div>
 
+    <!-- Overlay Content -->
+    <div
+      class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white text-center z-30"
+    >
+      <!-- Content goes here -->
+    </div>
+  </div>
 </section>
 
+<section class=" bg-black" style="margin-top: ">
+  <div
+    class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+  >
+    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-white "
+      >
+        Bio
+      </h2>
+      <p class="mb-4">
+        We are strategists, designers and developers. Innovators and problem
+        solvers. Small enough to be simple and quick, but big enough to deliver
+        the scope you want at the pace you need. Small enough to be simple and
+        quick, but big enough to deliver the scope you want at the pace you
+        need.
+      </p>
+      <p>
+        We are strategists, designers and developers. Innovators and problem
+        solvers. Small enough to be simple and quick.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4 mt-8">
+      <img
+        class="w-full rounded-lg"
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+        alt="office content 1"
+      />
+      <img
+        class="mt-4 w-full lg:mt-10 rounded-lg"
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+        alt="office content 2"
+      />
+    </div>
+  </div>
+</section>
 
 <app-footer></app-footer>
-
 
 <!-- <iframe width="1206" height="678" src="https://www.youtube.com/embed/yH1FJEQBzss?list=RDEM_NkDVSLoa4mY6IfvnzFzXA" title="MOGmusic - BE LIFTED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 <!-- <iframe width="1177" height="662" src="https://www.youtube.com/embed/uLwWx4eh4t0" title="Gee Prime - A re deitane ft. Future Majesties" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
