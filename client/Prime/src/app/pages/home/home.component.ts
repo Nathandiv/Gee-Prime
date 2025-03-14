@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavbarComponent } from "../../Share-UI/navbar/navbar.component";
 import { FooterComponent } from "../../Share-UI/footer/footer.component";
 
@@ -10,5 +10,9 @@ import { FooterComponent } from "../../Share-UI/footer/footer.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  @Input() imageUrl: string = '';
+  @Input() title: string = '';
+  @Input() artist: string = '';
 
 }
