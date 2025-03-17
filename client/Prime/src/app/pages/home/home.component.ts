@@ -3,6 +3,17 @@ import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
 
+interface Event {
+  date: string;
+  day: string;
+  venue: string;
+  location: string;
+  type: 'concert' | 'club';
+  image: string;
+  priceRange?: string;
+  soldOut?: boolean;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -36,5 +47,53 @@ export class HomeComponent {
       name: 'Deezer',
       url: 'https://www.deezer.com/'
     },
+  ];
+
+  events: Event[] = [
+    {
+      day: '20',
+      date: 'Mar 2024',
+      venue: 'District Nightclub',
+      location: 'Atlanta, GA',
+      type: 'club',
+      image: 'assets/images/district-nightclub.jpg',
+      priceRange: 'From $30'
+    },
+    {
+      day: '27',
+      date: 'Mar 2024',
+      venue: 'LIV Nightclub',
+      location: 'Miami Beach, FL',
+      type: 'club',
+      image: 'assets/images/liv-nightclub.jpg',
+      soldOut: true
+    },
+    {
+      day: '28',
+      date: 'Mar 2024',
+      venue: 'Big Night Live',
+      location: 'Boston, MA',
+      type: 'concert',
+      image: 'assets/images/big-night-live.jpg',
+      priceRange: 'From $45'
+    },
+    {
+      day: '29',
+      date: 'Mar 2024',
+      venue: 'Factory Town',
+      location: 'Miami, FL',
+      type: 'club',
+      image: 'assets/images/factory-town.jpg',
+      priceRange: 'From $25'
+    },
+    {
+      day: '30',
+      date: 'Mar 2024',
+      venue: 'Belly Up Aspen',
+      location: 'Aspen, CO',
+      type: 'concert',
+      image: 'assets/images/belly-up.jpg',
+      priceRange: 'From $55'
+    }
   ];
 }

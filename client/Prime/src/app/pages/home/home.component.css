@@ -120,7 +120,9 @@ figure:hover img {
 }
 
 .video-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Create two equal columns */
+  gap: 20px;
   align-items: center;
   justify-content: center;
   margin-top: -600px;

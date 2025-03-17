@@ -404,6 +404,21 @@
       <iframe
         width="1406"
         height="736"
+        src="https://www.youtube.com/embed/kmoORcIs6W4"
+        title="Could've Been"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+
+
+    <div class="iframe-container">
+      <iframe
+        width="1406"
+        height="736"
         src="https://www.youtube.com/embed/aQVCFMqX6YQ"
         title="A Re Deitane"
         frameborder="0"
@@ -413,9 +428,63 @@
       >
       </iframe>
     </div>
+    
   </div>
 </section>
 
+
+<section>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-white mb-8 text-center">Upcoming Events</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let event of events" 
+           class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="relative">
+          <img [src]="event.image" 
+               alt="Event image"
+               class="w-full h-48 object-cover">
+          <span class="absolute top-2 right-2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">
+            {{ event.type | titlecase }}
+          </span>
+        </div>
+  
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="bg-gray-100 p-2 rounded-lg text-center">
+              <div class="text-xl font-bold text-purple-600">{{ event.day }}</div>
+              <div class="text-sm uppercase text-gray-500">{{ event.date }}</div>
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold mb-1">{{ event.venue }}</h2>
+              <div class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                {{ event.location }}
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex justify-between items-center">
+            <button [disabled]="event.soldOut"
+                    class="px-4 py-2 rounded-lg transition-colors"
+                    [class.bg-purple-600]="!event.soldOut"
+                    [class.bg-gray-400]="event.soldOut"
+                    [class.text-white]="!event.soldOut"
+                    [class.cursor-not-allowed]="event.soldOut">
+              {{ event.soldOut ? 'Sold Out' : (event.type === 'club' ? 'RSVP Now' : 'Get Tickets') }}
+            </button>
+            <span class="text-gray-500 text-sm" *ngIf="event.priceRange">
+              {{ event.priceRange }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <app-footer></app-footer>
 
 <!-- <iframe width="1206" height="678" src="https://www.youtube.com/embed/yH1FJEQBzss?list=RDEM_NkDVSLoa4mY6IfvnzFzXA" title="MOGmusic - BE LIFTED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
