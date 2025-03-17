@@ -56,7 +56,7 @@ export class HomeComponent {
       venue: 'District Nightclub',
       location: 'Atlanta, GA',
       type: 'club',
-      image: 'assets/images/district-nightclub.jpg',
+      image: 'https://i.pinimg.com/736x/21/e4/c5/21e4c51155be921de69e4c5bf5923474.jpg',
       priceRange: 'From $30'
     },
     {
@@ -65,7 +65,7 @@ export class HomeComponent {
       venue: 'LIV Nightclub',
       location: 'Miami Beach, FL',
       type: 'club',
-      image: 'assets/images/liv-nightclub.jpg',
+      image: 'https://i.pinimg.com/736x/4c/20/02/4c20021bf0f2fe2abb3334efadb6090b.jpg',
       soldOut: true
     },
     {
@@ -74,7 +74,7 @@ export class HomeComponent {
       venue: 'Big Night Live',
       location: 'Boston, MA',
       type: 'concert',
-      image: 'assets/images/big-night-live.jpg',
+      image: 'https://i.pinimg.com/736x/ab/78/26/ab782659bc06ae9eb4f14a95164e62a8.jpg',
       priceRange: 'From $45'
     }
  
