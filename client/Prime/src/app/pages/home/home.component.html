@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
+<!-- Home Section -->
+
 <section id="home">
-  <!-- Home Section -->
   <div
     class="relative w-full min-h-screen overflow-hidden"
     style="margin-top: -80px"
@@ -16,28 +17,13 @@
       </iframe>
     </div>
 
-    <!-- Video Background -->
-    <!-- <video 
-    class="absolute top-0 left-0 w-full h-full object-cover"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source src="/client/Prime/src/app/videos/c0f8c431e78e4536abaf5fde17f1a5fc.mov" type="video/quicktime">
-  </video> -->
-
-    <!-- Dark Overlay -->
     <div
       class="absolute top-0 left-0 w-full h-full bg-black opacity-7 z-20"
     ></div>
 
-    <!-- Overlay Content -->
     <div
       class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white text-center z-30"
-    >
-      <!-- Content goes here -->
-    </div>
+    ></div>
   </div>
 </section>
 
@@ -93,7 +79,7 @@
 <section>
   <div
     class="flex flex-col bg-black text-center w-full"
-    style="margin-top: -10px;"
+    style="margin-top: -10px"
   >
     <!-- <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2> -->
     <h1
@@ -109,209 +95,74 @@
 
   <div class="cardM" style="">
     <div
-      class="flex flex-wrap sm:-m-4 -mx-4  gap-6 justify-center items-stretch"
+      class="flex flex-wrap sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
     >
-
-    <figure style="--c: #fff5; width: 220px; margin-top: 25px">
-      <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
-      <figcaption style="margin-bottom: 0px">
-        <div class="flex justify-center space-x-6">
-          <!-- Apple Music -->
-          <a
-            href="https://music.apple.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Apple Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+      <figure style="--c: #fff5; width: 220px; margin-top: 25px">
+        <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
+        <figcaption style="margin-bottom: 0px">
+          <div class="flex justify-center space-x-6">
+            <!-- Apple Music -->
+            <a
+              href="https://music.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
             >
-              <path
-                d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
-              ></path>
-            </svg>
-          </a>
+              <span class="sr-only">Apple Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
+                ></path>
+              </svg>
+            </a>
 
-          <!-- Spotify -->
-          <a
-            href="https://www.spotify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Spotify</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+            <!-- Spotify -->
+            <a
+              href="https://www.spotify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
             >
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
-              ></path>
-            </svg>
-          </a>
+              <span class="sr-only">Spotify</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
+                ></path>
+              </svg>
+            </a>
 
-          <!-- YouTube Music -->
-          <a
-            href="https://music.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">YouTube Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+            <!-- YouTube Music -->
+            <a
+              href="https://music.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
             >
-              <path
-                d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure style="--c: #fff5; width: 220px; margin-top: 25px">
-      <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
-      <figcaption style="margin-bottom: 0px">
-        <div class="flex justify-center space-x-6">
-          <!-- Apple Music -->
-          <a
-            href="https://music.apple.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Apple Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
-              ></path>
-            </svg>
-          </a>
-
-          <!-- Spotify -->
-          <a
-            href="https://www.spotify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Spotify</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
-              ></path>
-            </svg>
-          </a>
-
-          <!-- YouTube Music -->
-          <a
-            href="https://music.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">YouTube Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure style="--c: #fff5; width: 220px; margin-top: 25px">
-      <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
-      <figcaption style="margin-bottom: 0px">
-        <div class="flex justify-center space-x-6">
-          <!-- Apple Music -->
-          <a
-            href="https://music.apple.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Apple Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
-              ></path>
-            </svg>
-          </a>
-
-          <!-- Spotify -->
-          <a
-            href="https://www.spotify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">Spotify</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
-              ></path>
-            </svg>
-          </a>
-
-          <!-- YouTube Music -->
-          <a
-            href="https://music.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-500"
-          >
-            <span class="sr-only">YouTube Music</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </figcaption>
-    </figure>
+              <span class="sr-only">YouTube Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
 
       <figure style="--c: #fff5; width: 220px; margin-top: 25px">
         <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
@@ -380,14 +231,184 @@
         </figcaption>
       </figure>
 
+      <figure style="--c: #fff5; width: 220px; margin-top: 25px">
+        <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
+        <figcaption style="margin-bottom: 0px">
+          <div class="flex justify-center space-x-6">
+            <!-- Apple Music -->
+            <a
+              href="https://music.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">Apple Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Spotify -->
+            <a
+              href="https://www.spotify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">Spotify</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- YouTube Music -->
+            <a
+              href="https://music.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">YouTube Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure style="--c: #fff5; width: 220px; margin-top: 25px">
+        <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
+        <figcaption style="margin-bottom: 0px">
+          <div class="flex justify-center space-x-6">
+            <!-- Apple Music -->
+            <a
+              href="https://music.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">Apple Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Spotify -->
+            <a
+              href="https://www.spotify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">Spotify</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- YouTube Music -->
+            <a
+              href="https://music.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">YouTube Music</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
     </div>
+
     <!-- <figure>
     <img src="https://picsum.photos/id/287/250/300" alt="Mountains">
     <figcaption>The Day</figcaption>
 </figure> -->
+  </div>
+
+  <div class="min-h-screen p-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-center mb-2">STREAM NOW</h1>
+      <p class="text-gray-400 text-center">
+        Choose your favorite streaming platform
+      </p>
+    </header>
+
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div
+        *ngFor="let platform of platforms"
+        class="bg-stream-gray p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer"
+      >
+        <img
+          [src]="platform.imageUrl"
+          [alt]="platform.name"
+          class="w-12 h-12 mb-2"
+        />
+        <h3 class="text-sm font-semibold">{{ platform.name }}</h3>
+      </div>
+    </div>
   </div>
 </section>
 
 <app-footer></app-footer>
 
 <!-- <iframe width="1206" height="678" src="https://www.youtube.com/embed/yH1FJEQBzss?list=RDEM_NkDVSLoa4mY6IfvnzFzXA" title="MOGmusic - BE LIFTED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+<!-- Video Background -->
+<!-- <video 
+    class="absolute top-0 left-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="/client/Prime/src/app/videos/c0f8c431e78e4536abaf5fde17f1a5fc.mov" type="video/quicktime">
+  </video> -->
+
+<!-- Dark Overlay -->
