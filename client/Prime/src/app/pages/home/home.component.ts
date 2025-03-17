@@ -76,24 +76,7 @@ export class HomeComponent {
       type: 'concert',
       image: 'assets/images/big-night-live.jpg',
       priceRange: 'From $45'
-    },
-    {
-      day: '29',
-      date: 'Mar 2024',
-      venue: 'Factory Town',
-      location: 'Miami, FL',
-      type: 'club',
-      image: 'assets/images/factory-town.jpg',
-      priceRange: 'From $25'
-    },
-    {
-      day: '30',
-      date: 'Mar 2024',
-      venue: 'Belly Up Aspen',
-      location: 'Aspen, CO',
-      type: 'concert',
-      image: 'assets/images/belly-up.jpg',
-      priceRange: 'From $55'
     }
+ 
   ];
 }
