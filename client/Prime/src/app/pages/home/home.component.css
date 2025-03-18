@@ -140,3 +140,18 @@ figure:hover img {
   max-width: 100%;
   height: 500px;
 }
+
+@media (max-width: 640px) {
+  .cardM figure {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .video-section iframe {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 400px;
+    gap: 2px;
+
+
+  }
+}
