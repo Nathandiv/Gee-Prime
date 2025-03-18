@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
 interface Event {
   date: string;
@@ -170,4 +171,22 @@ export class HomeComponent {
       height: '250px',
     },
   ];
+
+  videos = [
+    {
+      src: 'https://www.youtube.com/embed/kmoORcIs6W4',
+      title: "Could've Been",
+    },
+    {
+      src: 'https://www.youtube.com/embed/aQVCFMqX6YQ',
+      title: 'A Re Deitane',
+    },
+  ];
+
+  constructor(private sanitizer: DomSanitizer) {}
+
+  // Sanitize the video URL
+  getSanitizedUrl(url: string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

@@ -153,27 +153,12 @@
   </div>
 
   <div class="video-section">
-    <div class="iframe-container">
+    <div *ngFor="let video of videos" class="iframe-container">
       <iframe
         width="1406"
         height="736"
-        src="https://www.youtube.com/embed/kmoORcIs6W4"
-        title="Could've Been"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
-
-
-    <div class="iframe-container">
-      <iframe
-        width="1406"
-        height="736"
-        src="https://www.youtube.com/embed/aQVCFMqX6YQ"
-        title="A Re Deitane"
+        [src]="getSanitizedUrl(video.src)"
+        [title]="video.title"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
