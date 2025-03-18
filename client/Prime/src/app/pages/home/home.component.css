@@ -150,8 +150,13 @@ figure:hover img {
     width: 100% !important;
     height: auto !important;
     margin-top: 400px;
-    gap: 2px;
 
 
   }
+
+  .stream {
+    margin-top: 370px; /* Remove large margin-top */
+   
+  }
 }
+
