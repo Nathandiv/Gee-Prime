@@ -149,7 +149,12 @@ figure:hover img {
   .video-section iframe {
     width: 100% !important;
     height: auto !important;
-    margin-top: 400px;
+
+
+  }
+
+  .video-section  {
+    margin-top: -420px;
 
 
   }
