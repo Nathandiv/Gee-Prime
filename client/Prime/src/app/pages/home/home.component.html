@@ -80,7 +80,6 @@
     class="flex flex-col bg-black text-center w-full"
     style="margin-top: -10px"
   >
-    <!-- <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2> -->
     <h1
       class="sm:text-3xl text-4xl tracking-tight font-extrabold text-white mb-2"
     >
@@ -92,7 +91,42 @@
     </p>
   </div>
 
-  <div class="cardM" style="">
+  <div class="cardM">
+    <div class="flex flex-wrap sm:-m-4 -mx-4 gap-6 justify-center items-stretch">
+      <figure
+        *ngFor="let card of cards"
+        style="--c: #fff5; width: 220px; margin-top: 25px"
+      >
+        <img [src]="card.imgSrc" alt="Card Image" />
+        <figcaption style="margin-bottom: 0px">
+          <div class="flex justify-center space-x-6">
+            <a
+              *ngFor="let link of card.links"
+              [href]="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-gray-500"
+            >
+              <span class="sr-only">{{ link.label }}</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  
+
+  <!-- <div class="cardM" style="">
     <div
       class="flex flex-wrap sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
     >
@@ -100,7 +134,7 @@
         <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
         <figcaption style="margin-bottom: 0px">
           <div class="flex justify-center space-x-6">
-            <!-- Apple Music -->
+
             <a
               href="https://music.apple.com/"
               target="_blank"
@@ -120,7 +154,7 @@
               </svg>
             </a>
 
-            <!-- Spotify -->
+
             <a
               href="https://www.spotify.com/"
               target="_blank"
@@ -140,7 +174,7 @@
               </svg>
             </a>
 
-            <!-- YouTube Music -->
+
             <a
               href="https://music.youtube.com/"
               target="_blank"
@@ -167,7 +201,7 @@
         <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
         <figcaption style="margin-bottom: 0px">
           <div class="flex justify-center space-x-6">
-            <!-- Apple Music -->
+
             <a
               href="https://music.apple.com/"
               target="_blank"
@@ -187,7 +221,7 @@
               </svg>
             </a>
 
-            <!-- Spotify -->
+
             <a
               href="https://www.spotify.com/"
               target="_blank"
@@ -207,7 +241,7 @@
               </svg>
             </a>
 
-            <!-- YouTube Music -->
+
             <a
               href="https://music.youtube.com/"
               target="_blank"
@@ -234,7 +268,7 @@
         <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
         <figcaption style="margin-bottom: 0px">
           <div class="flex justify-center space-x-6">
-            <!-- Apple Music -->
+
             <a
               href="https://music.apple.com/"
               target="_blank"
@@ -254,7 +288,7 @@
               </svg>
             </a>
 
-            <!-- Spotify -->
+
             <a
               href="https://www.spotify.com/"
               target="_blank"
@@ -274,7 +308,7 @@
               </svg>
             </a>
 
-            <!-- YouTube Music -->
+
             <a
               href="https://music.youtube.com/"
               target="_blank"
@@ -301,7 +335,7 @@
         <img src="https://picsum.photos/id/475/250/300" alt="Mountains" />
         <figcaption style="margin-bottom: 0px">
           <div class="flex justify-center space-x-6">
-            <!-- Apple Music -->
+
             <a
               href="https://music.apple.com/"
               target="_blank"
@@ -321,7 +355,7 @@
               </svg>
             </a>
 
-            <!-- Spotify -->
+
             <a
               href="https://www.spotify.com/"
               target="_blank"
@@ -341,7 +375,7 @@
               </svg>
             </a>
 
-            <!-- YouTube Music -->
+
             <a
               href="https://music.youtube.com/"
               target="_blank"
@@ -365,11 +399,8 @@
       </figure>
     </div>
 
-    <!-- <figure>
-    <img src="https://picsum.photos/id/287/250/300" alt="Mountains">
-    <figcaption>The Day</figcaption>
-</figure> -->
-  </div>
+ 
+  </div> -->
 
   <div class="min-h-screen p-8 mt-10">
     <header class="mb-12">
@@ -438,6 +469,9 @@
     <h1 class="text-4xl font-bold text-white mb-8 text-center">Upcoming Events</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
       <div *ngFor="let event of events" 
            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
         <div class="relative">
@@ -482,6 +516,9 @@
           </div>
         </div>
       </div>
+
+
+      
     </div>
   </div>
 </section>

@@ -79,4 +79,23 @@ export class HomeComponent {
     }
  
   ];
+
+  cards = [
+    {
+      imgSrc: 'https://picsum.photos/id/475/250/300',
+      links: [
+        { href: 'https://music.apple.com/', label: 'Apple Music' },
+        { href: 'https://www.spotify.com/', label: 'Spotify' },
+        { href: 'https://music.youtube.com/', label: 'YouTube Music' }
+      ]
+    },
+    {
+      imgSrc: 'https://picsum.photos/id/476/250/300',
+      links: [
+        { href: 'https://music.apple.com/', label: 'Apple Music' },
+        { href: 'https://www.spotify.com/', label: 'Spotify' },
+        { href: 'https://music.youtube.com/', label: 'YouTube Music' }
+      ]
+    }
+  ];
 }
