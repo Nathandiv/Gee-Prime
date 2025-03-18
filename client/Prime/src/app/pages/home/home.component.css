@@ -153,6 +153,16 @@ figure:hover img {
      /* Remove large margin-top */
    
   }
+
+  .about {
+    margin-top:100px; /* Remove large margin-top */
+   
+  }
+
+  .about1 {
+    margin-top:30px; /* Remove large margin-top */
+   
+  }
   .cardM figure {
     width: 100%;
     margin-top: 15px;

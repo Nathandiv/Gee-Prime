@@ -56,19 +56,19 @@ export class HomeComponent {
   events: Event[] = [
     {
       day: '20',
-      date: 'Mar 2024',
+      date: 'Mar 2025',
       venue: 'District Nightclub',
-      location: 'Atlanta, GA',
+      location: 'Johannesburg, Rosebank',
       type: 'club',
       image:
         'https://i.pinimg.com/736x/21/e4/c5/21e4c51155be921de69e4c5bf5923474.jpg',
-      priceRange: 'From $30',
+      priceRange: 'From R150',
     },
     {
       day: '27',
-      date: 'Mar 2024',
+      date: 'Mar 2025',
       venue: 'LIV Nightclub',
-      location: 'Miami Beach, FL',
+      location: 'Pretoria, Arcadia',
       type: 'club',
       image:
         'https://i.pinimg.com/736x/4c/20/02/4c20021bf0f2fe2abb3334efadb6090b.jpg',
@@ -76,13 +76,13 @@ export class HomeComponent {
     },
     {
       day: '28',
-      date: 'Mar 2024',
+      date: 'Mar 2054',
       venue: 'Big Night Live',
-      location: 'Boston, MA',
+      location: 'Sandton, Sandown',
       type: 'concert',
       image:
         'https://i.pinimg.com/736x/ab/78/26/ab782659bc06ae9eb4f14a95164e62a8.jpg',
-      priceRange: 'From $45',
+      priceRange: 'From R150',
     },
   ];
 
