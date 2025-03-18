@@ -142,6 +142,17 @@ figure:hover img {
 }
 
 @media (max-width: 640px) {
+
+  .iframe-container1 {
+    margin-top:px; /* Remove large margin-top */
+   
+  }
+
+  .homesec {
+    margin-top:-290px;
+     /* Remove large margin-top */
+   
+  }
   .cardM figure {
     width: 100%;
     margin-top: 15px;
