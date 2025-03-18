@@ -100,7 +100,12 @@
         *ngFor="let card of cards"
         style="--c: #fff5; width: 220px; margin-top: 25px"
       >
-        <img [src]="card.imgSrc" alt="Card Image" />
+        <img [src]="card.imgSrc"
+        [height]="card.imgHeight" 
+         alt="Card Image" 
+         style="height: 200px;"
+
+        />
         <figcaption style="margin-bottom: 0px">
 
 

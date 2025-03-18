@@ -89,7 +89,10 @@ export class HomeComponent {
 
   cards = [
     {
-      imgSrc: 'https://picsum.photos/id/475/250/300',
+      imgSrc:
+        'https://cdn-images.dzcdn.net/images/cover/3a92e0b716ef8e0dcfa06b354d02e9fe/1900x1900-000000-80-0-0.jpg',
+      // imgWidth: ,
+      imgHeight: 350,
       links: [
         {
           href: 'https://music.apple.com/',
@@ -112,7 +115,9 @@ export class HomeComponent {
       ],
     },
     {
-      imgSrc: 'https://picsum.photos/id/475/250/300',
+      imgSrc:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qauq6cr0ZIxiceynAX5bfWffOaQK26Gglg&s476/250/300',
+      imgHeight: 150,
       links: [
         {
           href: 'https://music.apple.com/',
@@ -133,10 +138,10 @@ export class HomeComponent {
             'M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
         },
       ],
-    }
-    ,
+    },
     {
-      imgSrc: 'https://picsum.photos/id/476/250/300',
+      imgSrc:
+        'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/20/36/c820362b-b622-df07-ed39-86a854698a0b/5063654459797_cover.jpg/486x486bb.png',
       links: [
         {
           href: 'https://music.apple.com/',
@@ -156,14 +161,12 @@ export class HomeComponent {
           iconPath:
             'M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
         },
-
-        
-
       ],
     },
 
     {
-      imgSrc: 'https://picsum.photos/id/476/250/300',
+      imgSrc:
+        'https://source.boomplaymusic.com/group10/M00/06/22/251d9432a9844ee0ac2091643565a5e9_320_320.jpg',
       links: [
         {
           href: 'https://music.apple.com/',
@@ -183,11 +186,8 @@ export class HomeComponent {
           iconPath:
             'M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
         },
-
-        
-
       ],
-    }
+    },
   ];
 
   card = {
@@ -225,7 +225,6 @@ export class HomeComponent {
       height: '250px',
       marginTop: '30px',
     },
-    
   ];
 
   videos = [
