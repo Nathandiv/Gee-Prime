@@ -26,11 +26,11 @@
   </div>
 </section>
 
-<section id="about" class="about  bg-black" style="margin-top: -68px">
+<section id="about" class="about bg-black" style="margin-top: -68px">
   <div
     class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
   >
-    <div class=" about1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
+    <div class="about1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
         Bio
       </h2>
@@ -71,12 +71,8 @@
         />
       </div>
     </div>
-
-
   </div>
 </section>
-
-
 
 <section>
   <div
@@ -94,21 +90,21 @@
     </p>
   </div>
 
-  <div class="cardM ">
-    <div class="flex flex-wrap  overflow-hidden sm:-m-4 -mx-4 gap-6 justify-center items-stretch">
+  <div class="cardM">
+    <div
+      class="flex flex-wrap overflow-hidden sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
+    >
       <figure
         *ngFor="let card of cards"
         style="--c: #fff5; width: 220px; margin-top: 25px"
       >
-        <img [src]="card.imgSrc"
-        [height]="card.imgHeight" 
-         alt="Card Image" 
-         style="height: 200px;"
-
+        <img
+          [src]="card.imgSrc"
+          [height]="card.imgHeight"
+          alt="Card Image"
+          style="height: 200px"
         />
         <figcaption style="margin-bottom: 0px">
-
-
           <div class="flex justify-center space-x-6">
             <a
               *ngFor="let link of card.links"
@@ -118,22 +114,22 @@
               class="text-white hover:text-gray-500"
             >
               <span class="sr-only">{{ link.label }}</span>
-              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path [attr.d]="link.iconPath"></path>
               </svg>
             </a>
           </div>
-
-
         </figcaption>
       </figure>
     </div>
   </div>
-  
 
-
-
-  <div class="stream min-h-screen p-8 mt-10 ">
+  <div class="stream min-h-screen p-8 mt-10">
     <header class="mb-12">
       <h1 class="text-4xl font-bold text-center mb-2">STREAM NOW</h1>
       <p class="text-gray-400 text-center">
@@ -175,69 +171,94 @@
       >
       </iframe>
     </div>
-    
   </div>
-
-
-
 </section>
-
 
 <section>
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-white mb-8 text-center">Upcoming Events</h1>
-    
+    <h1 class="text-4xl font-bold text-white mb-8 text-center">
+      Upcoming Events
+    </h1>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-
-
-      <div *ngFor="let event of events" 
-           class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      <div
+        *ngFor="let event of events"
+        class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+        style="background-color: rgba(108, 98, 105, 0.772)"
+      >
         <div class="relative">
-          <img [src]="event.image" 
-               alt="Event image"
-               class="w-full h-48 object-cover">
-          <span class="absolute top-2 right-2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">
+          <img
+            [src]="event.image"
+            alt="Event image"
+            class="w-full h-48 object-cover"
+          />
+          <span
+            class="absolute top-2 right-2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm"
+          >
             {{ event.type | titlecase }}
           </span>
         </div>
-  
+
         <div class="p-6">
           <div class="flex items-center gap-2 mb-4">
             <div class="bg-gray-100 p-2 rounded-lg text-center">
-              <div class="text-xl font-bold text-purple-600">{{ event.day }}</div>
-              <div class="text-sm uppercase text-gray-500">{{ event.date }}</div>
+              <div class="text-xl font-bold text-purple-600">
+                {{ event.day }}
+              </div>
+              <div class="text-sm uppercase text-gray-500">
+                {{ event.date }}
+              </div>
             </div>
             <div>
               <h2 class="text-xl font-semibold mb-1">{{ event.venue }}</h2>
-              <div class="flex items-center text-gray-600">
-                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <div class="flex items-center text-white">
+                <svg
+                  class="w-5 h-5 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
                 {{ event.location }}
               </div>
             </div>
           </div>
-  
+
           <div class="flex justify-between items-center">
-            <button [disabled]="event.soldOut"
-                    class="px-4 py-2 rounded-lg transition-colors"
-                    [class.bg-purple-600]="!event.soldOut"
-                    [class.bg-gray-400]="event.soldOut"
-                    [class.text-white]="!event.soldOut"
-                    [class.cursor-not-allowed]="event.soldOut">
-              {{ event.soldOut ? 'Sold Out' : (event.type === 'club' ? 'RSVP Now' : 'Get Tickets') }}
+            <button
+              [disabled]="event.soldOut"
+              class="px-4 py-2 rounded-lg transition-colors"
+              [class.bg-purple-600]="!event.soldOut"
+              [class.bg-gray-400]="event.soldOut"
+              [class.text-white]="!event.soldOut"
+              [class.cursor-not-allowed]="event.soldOut"
+            >
+              {{
+                event.soldOut
+                  ? "Sold Out"
+                  : event.type === "club"
+                  ? "RSVP Now"
+                  : "Get Tickets"
+              }}
             </button>
-            <span class="text-gray-500 text-sm" *ngIf="event.priceRange">
+            <span class="text-white text-sm" *ngIf="event.priceRange">
               {{ event.priceRange }}
             </span>
           </div>
         </div>
       </div>
-
-
-      
     </div>
   </div>
 </section>
@@ -258,9 +279,7 @@
 
 <!-- Dark Overlay -->
 
-
-
-  <!-- <div class="cardM" style="">
+<!-- <div class="cardM" style="">
     <div
       class="flex flex-wrap sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
     >
