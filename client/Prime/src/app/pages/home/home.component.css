@@ -199,4 +199,16 @@ figure:hover img {
 
 }
 
+@media (max-width: 360px) {
+
+
+  .video-section  {
+    margin-top: -290px;
+
+
+  }
+
+}
+
+
 
