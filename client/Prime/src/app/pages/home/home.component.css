@@ -212,5 +212,14 @@ figure:hover img {
 
 }
 
+@media (max-width: 430px) {
 
 
+  .video-section  {
+    margin-top: -430px;
+
+
+
+    
+  }
+}
