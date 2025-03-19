@@ -39,27 +39,6 @@
     border: none;
   }
 
-  /* Define a parent class to scope your styles */
-/* .scoped-container {
-  @apply bg-black text-white antialiased;
-}
-
-.scoped-container::-webkit-scrollbar {
-  width: 10px;
-}
-
-.scoped-container::-webkit-scrollbar-track {
-  @apply bg-zinc-900;
-}
-
-.scoped-container::-webkit-scrollbar-thumb {
-  @apply bg-zinc-700 rounded-full;
-}
-
-.scoped-container::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-600;
-} */
-
 figure {
   display: grid;
   border-radius: 1rem;
@@ -194,5 +173,30 @@ figure:hover img {
 
   }
 
+
 }
+
+
+@media (max-width: 460px) {
+
+
+  .video-section  {
+    margin-top: -560px;
+
+
+  }
+
+}
+
+@media (max-width: 400px) {
+
+
+  .video-section  {
+    margin-top: -470px;
+
+
+  }
+
+}
+
 
