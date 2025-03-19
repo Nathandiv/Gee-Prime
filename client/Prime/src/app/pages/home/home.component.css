@@ -175,7 +175,7 @@ figure:hover img {
   }
 
   .video-section  {
-    margin-top: -420px;
+    margin-top: -400px;
 
 
   }
@@ -184,5 +184,15 @@ figure:hover img {
     margin-top: 750px; /* Remove large margin-top */
    
   }
+
+  .video-section1  {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    margin-top: 10rem;
+
+  }
+
 }
 
