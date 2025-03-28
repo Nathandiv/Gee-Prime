@@ -198,6 +198,16 @@ figure:hover img {
     
   }
 
+  .layout {
+    height: 330px; /* Remove large margin-top */
+   
+  }
+
+  .about1 {
+    margin-top:-340px; /* Remove large margin-top */
+   
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -209,15 +219,35 @@ figure:hover img {
 
   }
 
+  .layout {
+    height: 300px; /* Remove large margin-top */
+   
+  }
+
+  .about1 {
+    margin-top:-290px; /* Remove large margin-top */
+   
+  }
+
 }
 
 @media (max-width: 360px) {
 
 
   .video-section  {
-    margin-top: -290px;
+    margin-top: -300px;
 
 
+  }
+
+  .layout {
+    height: 290px; /* Remove large margin-top */
+   
+  }
+
+  .about1 {
+    margin-top:-285px; /* Remove large margin-top */
+   
   }
 
 }
