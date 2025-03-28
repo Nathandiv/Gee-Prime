@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
@@ -30,7 +30,13 @@ interface CarouselSlide {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements AfterViewInit  {
+export class HomeComponent implements OnInit  {
+
+  ngOnInit(): void {
+    setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
 
   currentSlide = 0;
   
@@ -39,40 +45,40 @@ export class HomeComponent implements AfterViewInit  {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
       description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://nathandiv.github.io/TP2_Furniture_Store/assets/images/nina-couch-grey.jpg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSBUX3h6ySOLQXKT2eMjORZnkphzeNtvdPXBReJLFGnwTlYk3BoB5zo4&s',
       alt: 'Modern living room setup'
     },
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
       description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://nathandiv.github.io/TP2_Furniture_Store/assets/images/nina-couch-black.jpg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSBUX3h6ySOLQXKT2eMjORZnkphzeNtvdPXBReJLFGnwTlYk3BoB5zo4&s',
       alt: 'Luxury furniture showcase'
     }
   ];
 
 
-  @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
+  // @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
 
-  ngAfterViewInit() {
-    if (this.videoPlayer) {
-      this.enforceMute();
-    }
-  }
+  // ngAfterViewInit() {
+  //   if (this.videoPlayer) {
+  //     this.enforceMute();
+  //   }
+  // }
 
-  enforceMute() {
-    const video = this.videoPlayer.nativeElement;
-    video.muted = true;
-    video.volume = 0;
+  // enforceMute() {
+  //   const video = this.videoPlayer.nativeElement;
+  //   video.muted = true;
+  //   video.volume = 0;
 
-    // Prevents unmuting
-    video.addEventListener('volumechange', () => {
-      if (!video.muted) {
-        video.muted = true;
-        video.volume = 0;
-      }
-    });
-  }
+  //   // Prevents unmuting
+  //   video.addEventListener('volumechange', () => {
+  //     if (!video.muted) {
+  //       video.muted = true;
+  //       video.volume = 0;
+  //     }
+  //   });
+  // }
 
   @Input() imageUrl: string = '';
   @Input() title: string = '';
@@ -288,6 +294,26 @@ export class HomeComponent implements AfterViewInit  {
       title: 'A Re Deitane',
     },
   ];
+
+  nextSlide(): void {
+    this.currentSlide = (this.currentSlide + 1) % this.carouselSlides.length;
+  }
+
+  previousSlide(): void {
+    this.currentSlide = this.currentSlide === 0 ? this.carouselSlides.length - 1 : this.currentSlide - 1;
+  }
+
+  goToSlide(index: number): void {
+    this.currentSlide = index;
+  }
+
+  getRatingStars(rating: number): number[] {
+    return Array(Math.floor(rating)).fill(0);
+  }
+
+  getPartialStar(rating: number): number {
+    return rating % 1;
+  }
 
   constructor(private sanitizer: DomSanitizer) {}
 
