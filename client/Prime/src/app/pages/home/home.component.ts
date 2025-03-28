@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit  {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
       description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSBUX3h6ySOLQXKT2eMjORZnkphzeNtvdPXBReJLFGnwTlYk3BoB5zo4&s',
+      image: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/20/36/c820362b-b622-df07-ed39-86a854698a0b/5063654459797_cover.jpg/486x486bb.png',
       alt: 'Modern living room setup'
     },
     {
