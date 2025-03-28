@@ -112,7 +112,8 @@
   <div
     class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
   >
-    <div class="about1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
+    <div  data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom" class="about1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
         Bio
       </h2>
@@ -149,6 +150,9 @@
           [alt]="image.alt"
           [style.height]="image.height"
           [style.marginTop]="image.marginTop"
+          [attr.data-aos]="image.aos"
+          [attr.data-aos-offset]="image.aosOffset"
+          [attr.data-aos-easing]="image.aosEasing"
           class="w-full rounded-lg shadow-lg shadow-white/60 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
         />
       </div>
@@ -211,7 +215,7 @@
     </div>
   </div>
 
-  <div class="stream min-h-screen p-8 mt-10">
+  <div class="stream min-h-screen p-8 mt-10 " style="margin-bottom: 200px;">
     <header class="mb-12">
       <h1 class="text-4xl font-bold text-center mb-2">STREAM NOW</h1>
       <p class="text-gray-400 text-center">
@@ -239,7 +243,7 @@
     </div>
   </div>
 
-  <div class="video-section">
+  <div class="video-section" style="margin-top: px;">
     <div *ngFor="let video of videos" class="iframe-container">
       <iframe
         width="1406"

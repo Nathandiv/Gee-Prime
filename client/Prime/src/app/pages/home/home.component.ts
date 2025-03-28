@@ -275,12 +275,19 @@ export class HomeComponent implements OnInit  {
       src: 'https://mp3bullet.ng/wp-content/uploads/2025/02/Gee-Primes-Timeless-Confessions-Album-A-Soulful-Afro-House-Journey.jpg',
       alt: 'office content 1',
       height: '250px',
+      marginTop: '0px',
+      aos: 'fade-right',
+      aosOffset: '300',
+      aosEasing: 'ease-in-sine'
     },
     {
       src: 'https://images.caxton.co.za/wp-content/uploads/sites/112/2024/03/A7403411_79617-e1709890587845.jpg',
       alt: 'office content 2',
       height: '250px',
       marginTop: '30px',
+      aos: 'fade-left',
+      aosOffset: '300',
+      aosEasing: 'ease-in-sine'
     },
   ];
 
