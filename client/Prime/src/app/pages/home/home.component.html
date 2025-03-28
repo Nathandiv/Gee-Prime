@@ -178,6 +178,7 @@
 
   <div class="cardM">
     <div
+   
       class="flex flex-wrap overflow-hidden sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
     >
       <figure
@@ -228,6 +229,9 @@
       style="margin-top: -30px"
     >
       <div
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
         *ngFor="let platform of platforms"
         class="bg-stream-gray p-4 rounded-lg flex flex-col items-center justify-center border-none"
       >
@@ -243,8 +247,12 @@
     </div>
   </div>
 
-  <div class="video-section" style="margin-top: px;">
-    <div *ngFor="let video of videos" class="iframe-container">
+  <div  class="video-section" style="margin-top: px;">
+    <div
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+     *ngFor="let video of videos" class="iframe-container">
       <iframe
         width="1406"
         height="736"
