@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
@@ -22,7 +22,30 @@ interface Event {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit  {
+
+  @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
+
+  ngAfterViewInit() {
+    if (this.videoPlayer) {
+      this.enforceMute();
+    }
+  }
+
+  enforceMute() {
+    const video = this.videoPlayer.nativeElement;
+    video.muted = true;
+    video.volume = 0;
+
+    // Prevents unmuting
+    video.addEventListener('volumechange', () => {
+      if (!video.muted) {
+        video.muted = true;
+        video.volume = 0;
+      }
+    });
+  }
+
   @Input() imageUrl: string = '';
   @Input() title: string = '';
   @Input() artist: string = '';

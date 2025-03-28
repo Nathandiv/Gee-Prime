@@ -8,25 +8,26 @@
   >
     <div class="video-section1">
       <div
-        class="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-20"
+        class="layout absolute top-0 left-0 w-full h-full bg-black opacity-70 z-20"
       ></div>
       <div class="iframe-container1">
-        <iframe
-          width="100%"
-          height="950"
-          src="https://www.youtube.com/embed/uLwWx4eh4t0?autoplay=1&mute=1&controls=0"
-          title="A Re Deitane"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <video
+  #videoPlayer
+  class="w-full h-full"
+  controls
+  autoplay
+  muted
+  loop
+>
+  <source src="assets/videos/a-re-deitane-ft-future-majesties---gee-prime.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about" class="about bg-black" style="margin-top: -68px">
+<section id="about" class="about  bg-black" style="margin-top: -68px">
   <div
     class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
   >
