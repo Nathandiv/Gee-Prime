@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     initFlowbite();
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: false,
+      easing: 'ease-in-out',
+    });
   }
 }

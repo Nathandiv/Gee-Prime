@@ -129,6 +129,7 @@ figure:hover img {
 
   .homesec {
     margin-top:-290px;
+    height: 800px;
      /* Remove large margin-top */
    
   }
@@ -136,6 +137,10 @@ figure:hover img {
   .about {
     margin-top:-50px; /* Remove large margin-top */
    
+  }
+
+  .homeimage {
+    height: 100%;
   }
 
   .about1 {
@@ -204,7 +209,7 @@ figure:hover img {
   }
 
   .about1 {
-    margin-top:50px; /* Remove large margin-top */
+    margin-top:70px; /* Remove large margin-top */
    
   }
 
@@ -225,7 +230,7 @@ figure:hover img {
   }
 
   .about1 {
-    margin-top:45px; /* Remove large margin-top */
+    margin-top:10px; /* Remove large margin-top */
    
   }
 
