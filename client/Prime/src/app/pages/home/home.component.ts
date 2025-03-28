@@ -15,6 +15,14 @@ interface Event {
   soldOut?: boolean;
 }
 
+interface CarouselSlide {
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  alt: string;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -23,6 +31,26 @@ interface Event {
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements AfterViewInit  {
+
+  currentSlide = 0;
+  
+  carouselSlides: CarouselSlide[] = [
+    {
+      title: 'Discover Inspired Living',
+      subtitle: 'Explore Elevated Living',
+      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image: 'https://nathandiv.github.io/TP2_Furniture_Store/assets/images/nina-couch-grey.jpg',
+      alt: 'Modern living room setup'
+    },
+    {
+      title: 'Premium Comfort',
+      subtitle: 'Experience Luxury',
+      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
+      image: 'https://nathandiv.github.io/TP2_Furniture_Store/assets/images/nina-couch-black.jpg',
+      alt: 'Luxury furniture showcase'
+    }
+  ];
+
 
   @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
 
