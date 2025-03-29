@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '
 import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Event {
   date: string;
@@ -45,14 +45,42 @@ export class HomeComponent implements OnInit  {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
       description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/20/36/c820362b-b622-df07-ed39-86a854698a0b/5063654459797_cover.jpg/486x486bb.png',
+      image: 'https://i.pinimg.com/474x/d2/8e/ab/d28eabe532ef88cb044780fbfb24dafb.jpg',
       alt: 'Modern living room setup'
     },
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
       description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSBUX3h6ySOLQXKT2eMjORZnkphzeNtvdPXBReJLFGnwTlYk3BoB5zo4&s',
+      image: 'https://i.pinimg.com/474x/2a/c3/ca/2ac3cab498870520aabca9b96e0baef7.jpg',
+      alt: 'Luxury furniture showcase'
+    },
+    {
+      title: 'Discover Inspired Living',
+      subtitle: 'Explore Elevated Living',
+      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image: 'https://i.pinimg.com/474x/34/1b/7e/341b7e3c8ddc3ea71b610e100560c7a5.jpg',
+      alt: 'Modern living room setup'
+    },
+    {
+      title: 'Premium Comfort',
+      subtitle: 'Experience Luxury',
+      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
+      image: 'https://i.pinimg.com/474x/31/e0/7b/31e07bca26c26434484c9ab8c80b44a0.jpg',
+      alt: 'Luxury furniture showcase'
+    },
+        {
+      title: 'Discover Inspired Living',
+      subtitle: 'Explore Elevated Living',
+      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image: 'https://i.pinimg.com/474x/28/8e/2a/288e2ac0a2d976c8874c2c851af19746.jpg',
+      alt: 'Modern living room setup'
+    },
+    {
+      title: 'Premium Comfort',
+      subtitle: 'Experience Luxury',
+      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
+      image: 'https://i.pinimg.com/474x/31/75/5b/31755bdb3c36236a2a7dae06df9eddc8.jpg',
       alt: 'Luxury furniture showcase'
     }
   ];
@@ -301,6 +329,7 @@ export class HomeComponent implements OnInit  {
       title: 'A Re Deitane',
     },
   ];
+  
 
   nextSlide(): void {
     this.currentSlide = (this.currentSlide + 1) % this.carouselSlides.length;
@@ -322,10 +351,20 @@ export class HomeComponent implements OnInit  {
     return rating % 1;
   }
 
-  constructor(private sanitizer: DomSanitizer) {}
+
+  currentVideo: SafeResourceUrl; // Holds the currently playing video
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.currentVideo = this.getSanitizedUrl(this.videos[0].src + '?autoplay=1'); // Load first video with autoplay
+  }
 
   // Sanitize the video URL
-  getSanitizedUrl(url: string) {
+  getSanitizedUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  // Change video without refreshing the iframe
+  changeVideo(index: number) {
+    this.currentVideo = this.getSanitizedUrl(this.videos[index].src + '?autoplay=1');
   }
 }

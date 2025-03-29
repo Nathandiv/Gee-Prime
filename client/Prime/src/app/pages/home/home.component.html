@@ -229,9 +229,7 @@
       style="margin-top: -30px"
     >
       <div
-      data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="1500"
+     
         *ngFor="let platform of platforms"
         class="bg-stream-gray p-4 rounded-lg flex flex-col items-center justify-center border-none"
       >
@@ -249,21 +247,19 @@
 
   <div  class="video-section" style="margin-top: px;">
     <div
-    data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500"
+ 
      *ngFor="let video of videos" class="iframe-container">
-      <iframe
-        width="1406"
-        height="736"
-        [src]="getSanitizedUrl(video.src)"
-        [title]="video.title"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
+     <iframe
+     width="1406"
+     height="736"
+     [src]="getSanitizedUrl(video.src)"
+     [title]="video.title"
+     frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     referrerpolicy="strict-origin-when-cross-origin"
+     allowfullscreen
+   ></iframe>
+   
     </div>
   </div>
 </section>
