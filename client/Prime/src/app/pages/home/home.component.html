@@ -216,7 +216,7 @@
     </div>
   </div>
 
-  <div class="stream min-h-screen p-8 mt-10 " style="margin-bottom: 200px;">
+  <div class="stream min-h-screen p-8 mt-10 " style="margin-bottom: 0px;">
     <header class="mb-12">
       <h1 class="text-4xl font-bold text-center mb-2">STREAM NOW</h1>
       <p class="text-gray-400 text-center">
@@ -226,7 +226,7 @@
 
     <div
       class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4"
-      style="margin-top: -30px"
+      style="margin-top: -30px;"
     >
       <div
      
@@ -245,9 +245,9 @@
     </div>
   </div>
 
-  <div  class="video-section" style="margin-top: px;">
+  <div  class="video-section" >
     <div
- 
+    
      *ngFor="let video of videos" class="iframe-container">
      <iframe
      width="1406"
@@ -255,7 +255,7 @@
      [src]="getSanitizedUrl(video.src)"
      [title]="video.title"
      frameborder="0"
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     allow="accelerometer; autoplayy; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
      referrerpolicy="strict-origin-when-cross-origin"
      allowfullscreen
    ></iframe>
