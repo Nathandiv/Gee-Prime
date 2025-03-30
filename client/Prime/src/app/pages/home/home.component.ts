@@ -321,7 +321,7 @@ export class HomeComponent implements OnInit  {
 
   videos = [
     {
-      src: 'https://www.youtube.com/embed/kmoORcIs6W4',
+      src: 'https://www.youtube.com/embed/uLwWx4eh4t0',
       title: "Could've Been",
     },
     {

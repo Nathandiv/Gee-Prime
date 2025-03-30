@@ -268,3 +268,14 @@ figure:hover img {
     
   }
 }
+
+
+@media (max-width: 390px) {
+
+
+  .video-section  {
+    margin-top: -425px;
+
+
+  }
+}
