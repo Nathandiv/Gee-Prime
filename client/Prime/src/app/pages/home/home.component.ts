@@ -131,12 +131,12 @@ export class HomeComponent implements OnInit  {
       name: 'YouTube',
       url: 'https://www.youtube.com/',
     },
-    {
-      imageUrl:
-        'https://i.pinimg.com/474x/05/ee/55/05ee55960ac7c0162c2f2ee988dc7783.jpg',
-      name: 'Deezer',
-      url: 'https://www.deezer.com/',
-    },
+    // {
+    //   imageUrl:
+    //     'https://i.pinimg.com/474x/05/ee/55/05ee55960ac7c0162c2f2ee988dc7783.jpg',
+    //   name: 'Deezer',
+    //   url: 'https://www.deezer.com/',
+    // },
   ];
 
   events: Event[] = [
