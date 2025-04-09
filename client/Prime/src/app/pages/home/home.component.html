@@ -2,55 +2,55 @@
 <!-- Home Section -->
 
 <section data-aos="zoom-out-down" id="home" class="homesec">
-  <div class="relative w-full overflow-hidden" >
+  <div class="relative w-full overflow-hidden">
     <!-- Carousel container -->
     <div class="relative">
       <!-- Carousel slides -->
       <div
-      class="homeimage relative flex transition-transform duration-500 ease-in-out transform h-screen w-full"
-      [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
-    >
-      <!-- Dynamic Slides -->
-      <div
-        *ngFor="let slide of carouselSlides"
-        class="min-w-full h-screen relative flex items-center justify-center"
+        class="homeimage relative flex transition-transform duration-500 ease-in-out transform h-screen w-full"
+        [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
       >
+        <!-- Dynamic Slides -->
         <div
-          class="w-full h-full flex items-center justify-center bg-gradient-to-r from-gray-100 to-gray-200"
+          *ngFor="let slide of carouselSlides"
+          class="min-w-full h-screen relative flex items-center justify-center"
         >
-        <img
-        [src]="slide.image"
-        [alt]="slide.alt"
-        class="w-full h-full  object-fill"
-      />
-    
-          <!-- Overlay with Call to Action -->
           <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4"
+            class="w-full h-full flex items-center justify-center bg-gradient-to-r from-gray-100 to-gray-200"
           >
-          <h2 class="text-white text-3xl md:text-5xl font-bold mb-4">
-            Ready to Feel the Vibe?
-          </h2>
-          <p class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl">
-            Real lyrics. Raw sound. Pure vibe.
-          </p>
-          
-          <a href="#music">
-            <button class="button-54" role="button">
-              <span class="text">music</span>
-            </button>
-          </a>
-          
+            <img
+              [src]="slide.image"
+              [alt]="slide.alt"
+              class="w-full h-full object-fill"
+            />
+
+            <!-- Overlay with Call to Action -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4"
+            >
+              <h2 class="text-white text-3xl md:text-5xl font-bold mb-4">
+                Ready to Feel the Vibe?
+              </h2>
+              <p
+                class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl"
+              >
+                Real lyrics. Raw sound. Pure vibe.
+              </p>
+
+              <a href="#music">
+                <button class="button-54" role="button">
+                  <span class="text">music</span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
 
       <!-- Navigation arrows -->
       <button
         (click)="previousSlide()"
-        class="absolute left-0 top-1/2 transform -translate-y-1/2  p-3 rounded-r-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 rounded-r-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300"
       >
         <svg
           class="w-6 h-6"
@@ -68,7 +68,7 @@
       </button>
       <button
         (click)="nextSlide()"
-        class="absolute right-0 top-1/2 transform -translate-y-1/2  p-3 rounded-l-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 rounded-l-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300"
       >
         <svg
           class="w-6 h-6"
@@ -132,8 +132,11 @@
   <div
     class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
   >
-    <div  data-aos="fade-up"
-    data-aos-anchor-placement="center-bottom" class="about1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      class="about1 font-light text-gray-500 sm:text-lg dark:text-gray-400"
+    >
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
         Bio
       </h2>
@@ -198,7 +201,6 @@
 
   <div class="cardM">
     <div
-   
       class="flex flex-wrap overflow-hidden sm:-m-4 -mx-4 gap-6 justify-center items-stretch"
     >
       <figure
@@ -210,6 +212,8 @@
           [height]="card.imgHeight"
           alt="Card Image"
           style="height: 200px"
+          data-aos="fade-up"
+          data-aos-duration="2000"
         />
         <figcaption style="margin-bottom: 0px">
           <div class="flex justify-center space-x-6">
@@ -236,7 +240,7 @@
     </div>
   </div>
 
-  <div class="stream min-h-screen p-8 mt-10 " style="margin-bottom: 0px;">
+  <div class="stream min-h-screen p-8 mt-10" style="margin-bottom: 0px">
     <header class="mb-12">
       <h1 class="text-4xl font-bold text-center mb-2">STREAM NOW</h1>
       <p class="text-gray-400 text-center">
@@ -246,10 +250,11 @@
 
     <div
       class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-3 gap-2"
-      style="margin-top: -30px;"
+      style="margin-top: -30px"
     >
       <div
-     
+        data-aos="fade-up"
+        data-aos-duration="1500"
         *ngFor="let platform of platforms"
         class="bg-stream-gray p-4 rounded-lg flex flex-col items-center justify-center border-none"
       >
@@ -265,13 +270,20 @@
     </div>
   </div>
 
-  <div class="video-section" style="margin-top: px;">
-   
-    <div class="iframe-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/uLwWx4eh4t0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+  <div class="video-section" style="margin-top: px">
+    <div
+    data-aos="fade-up"
+     data-aos-duration="2000"
+     class="iframe-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/uLwWx4eh4t0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
-  
   </div>
 </section>
 
@@ -281,7 +293,10 @@
       Upcoming Events
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+    data-aos="fade-up"
+     data-aos-duration="2000"
+     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
         *ngFor="let event of events"
         class="rounded-lg lg shadow-lg shadow-white/60 overflow-hidden hover:shadow-xl transition-shadow"
@@ -375,9 +390,10 @@
       <h3 class="text-lg font-semibold text-gray-400">BOOKINGS</h3>
       <!-- <a href="#" class="text-white underline">ALEGRIA AGENCY</a> -->
       <p class="text-white">
-  <a href="mailto:info@geeprime.com" class="text-white">info&#64;geeprime.com</a>
-</p>
-      
+        <a href="mailto:info@geeprime.com" class="text-white"
+          >info&#64;geeprime.com</a
+        >
+      </p>
     </div>
 
     <div class="mt-6">
@@ -480,17 +496,20 @@
     <div class="mt-6">
       <h3 class="text-lg font-semibold text-gray-400">EMAIL UPDATES</h3>
       <div class="flex flex-col md:flex-row justify-center items-center mt-2">
-        <form  action="https://api.web3forms.com/submit" method="POST" class="w-full flex justify-center items-center">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="w-full flex justify-center items-center"
+        >
           <input
-          type="hidden"
-          name="access_key"
-          value="18155a87-df5c-4465-b923-8cb64eb3e1b3"
-        />
+            type="hidden"
+            name="access_key"
+            value="18155a87-df5c-4465-b923-8cb64eb3e1b3"
+          />
           <div
             class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md w-full p-4"
           >
             <div class="relative w-full sm:w-2/3">
-          
               <input
                 type="email"
                 name="email"
@@ -528,9 +547,4 @@
 
 <app-footer></app-footer>
 
-
 <!-- HTML !-->
-
-
-
-
