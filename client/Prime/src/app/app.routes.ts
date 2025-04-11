@@ -8,13 +8,14 @@ import { MusicComponent } from './pages/music/music.component';
 import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
+    {
+        path:'',component:LandingComponent
+    },
 
     {
-        path:'',component:HomeComponent
+        path:'home',component:HomeComponent
     },
-    {
-        path:'landing',component:LandingComponent
-    },
+  
 
     {
         path:'about',component:AboutComponent
