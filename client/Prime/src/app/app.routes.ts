@@ -8,41 +8,43 @@ import { MusicComponent } from './pages/music/music.component';
 import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
+  //   {
+  //     path: '',
+  //     redirectTo: 'landing',
+  //     pathMatch: 'full',
+  //   },
+  {
+    path: '',
+    component: LandingComponent,
+  },
 
-    // {
-    //     path: '',
-    //     redirectTo: 'landing',
-    //     pathMatch: 'full'
-    //   },
-    {
-        path:'',component:LandingComponent
-    },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
 
-    {
-        path:'home',component:HomeComponent
-    },
-  
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
 
-    {
-        path:'about',component:AboutComponent
-    },
+  {
+    path: 'music',
+    component: MusicComponent,
+  },
 
-    {
-        path:'music',component:MusicComponent
-    },
+  {
+    path: 'tour',
+    component: TourComponent,
+  },
 
-    {
-        path:'tour',component:TourComponent
-    },
+  {
+    path: 'shop',
+    component: ShopComponent,
+  },
 
-
-    {
-        path:'shop',component:ShopComponent
-    },
-
-    {
-        path:'contact',component:ContactComponent
-    },
-
-
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
 ];
