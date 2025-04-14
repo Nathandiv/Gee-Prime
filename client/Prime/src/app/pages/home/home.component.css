@@ -416,3 +416,23 @@ transition: background .3s, transform .3s, box-shadow .3s;
   box-shadow: inset 0 0 9999px rgba(0, 0, 0, 0.3);
   transition: 0s;
 }
+
+
+.mobile-only,
+.desktop-only {
+  display: none;
+}
+
+/* Show mobile block only on screens <= 620px */
+@media (max-width: 620px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Show desktop block only on screens > 620px */
+@media (min-width: 621px) {
+  .desktop-only {
+    display: block;
+  }
+}

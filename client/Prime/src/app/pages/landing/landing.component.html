@@ -1,35 +1,50 @@
-<div class="video-background">
-    <!-- YouTube Background Video -->
-    <div class="video-container">
-      <iframe
-        class="video-iframe  w-full"
-        src="https://www.youtube.com/embed/6qHuxAXphdU?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&playlist=6qHuxAXphdU"        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Background Video"
-      ></iframe>
-    </div>
-  
-    <!-- Overlay -->
-    <div class="video-overlay"></div>
-  
-    <!-- Content -->
-    <div
-    class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4"
-  >
-    <h2 class="text-white text-3xl md:text-5xl font-bold mb-4">
-      Ready to Feel the Vibe?
-    </h2>
-    <p
-      class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl"
-    >
-      Real lyrics. Raw sound. Pure vibe.
-    </p>
+<div class="video-background mobile-only">
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/LMLVoeErvWo?autoplay=1&mute=1&loop=1&playlist=LMLVoeErvWo&controls=0&modestbranding=1&rel=0&showinfo=0"
+      title="YouTube Shorts Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
 
+  <div class="video-overlay"></div>
+
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4">
+    <h2 class="text-white text-3xl md:text-5xl font-bold mb-4">Ready to Feel the Vibe?</h2>
+    <p class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl">Real lyrics. Raw sound. Pure vibe.</p>
     <a href="home">
       <button class="button-54" type="button" role="button" (click)="goToHome()">
         <span class="text">music</span>
       </button>
     </a>
   </div>
+</div>
+
+
+
+
+<div class="video-background desktop-only">
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/uLwWx4eh4t0?autoplay=1&mute=1&loop=1&playlist=uLwWx4eh4t0"
+      title="Gee Prime - A re deitane ft. Future Majesties"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
   </div>
+
+  <div class="video-overlay"></div>
+
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4">
+    <h2 class="text-white text-3xl md:text-5xl font-bold mb-4">Ready to Feel the Vibe?</h2>
+    <p class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl">Real lyrics. Raw sound. Pure vibe.</p>
+    <a href="home">
+      <button class="button-54" type="button" role="button" (click)="goToHome()">
+        <span class="text">music</span>
+      </button>
+    </a>
+  </div>
+</div>
