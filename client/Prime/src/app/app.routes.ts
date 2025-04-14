@@ -9,13 +9,13 @@ import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
 
+    // {
+    //     path: '',
+    //     redirectTo: 'landing',
+    //     pathMatch: 'full'
+    //   },
     {
-        path: '',
-        redirectTo: 'landing',
-        pathMatch: 'full'
-      },
-    {
-        path:'landing',component:LandingComponent
+        path:'',component:LandingComponent
     },
 
     {
