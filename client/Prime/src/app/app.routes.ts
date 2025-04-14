@@ -8,8 +8,14 @@ import { MusicComponent } from './pages/music/music.component';
 import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
+
     {
-        path:'',component:LandingComponent
+        path: '',
+        redirectTo: 'landing',
+        pathMatch: 'full'
+      },
+    {
+        path:'landing',component:LandingComponent
     },
 
     {
