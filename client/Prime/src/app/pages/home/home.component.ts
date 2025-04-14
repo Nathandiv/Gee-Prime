@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
@@ -9,7 +16,7 @@ interface Event {
   day: string;
   venue: string;
   location: string;
-  type: 'concert' | 'club';
+  type: 'concert' | 'club' | 'festival' | 'On Air';
   image: string;
   priceRange?: string;
   soldOut?: boolean;
@@ -30,8 +37,7 @@ interface CarouselSlide {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit  {
-
+export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.nextSlide();
@@ -39,40 +45,46 @@ export class HomeComponent implements OnInit  {
   }
 
   currentSlide = 0;
-  
+
   carouselSlides: CarouselSlide[] = [
     {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
-      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://cdn-images.dzcdn.net/images/artist/521e61ad6c452767a2ecb5cffc7d6f38/1900x1900-000000-80-0-0.jpg',
-      alt: 'Modern living room setup'
+      description:
+        'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image:
+        'https://cdn-images.dzcdn.net/images/artist/521e61ad6c452767a2ecb5cffc7d6f38/1900x1900-000000-80-0-0.jpg',
+      alt: 'Modern living room setup',
     },
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
-      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://i.pinimg.com/736x/3a/c8/f8/3ac8f87f5dfa043511b8e04ff0939644.jpg',
-      alt: 'Luxury furniture showcase'
+      description:
+        'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
+      image:
+        'https://i.pinimg.com/736x/3a/c8/f8/3ac8f87f5dfa043511b8e04ff0939644.jpg',
+      alt: 'Luxury furniture showcase',
     },
-   
+
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
-      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://i.pinimg.com/474x/31/e0/7b/31e07bca26c26434484c9ab8c80b44a0.jpg',
-      alt: 'Luxury furniture showcase'
+      description:
+        'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
+      image:
+        'https://i.pinimg.com/474x/31/e0/7b/31e07bca26c26434484c9ab8c80b44a0.jpg',
+      alt: 'Luxury furniture showcase',
     },
-        {
+    {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
-      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://i.pinimg.com/736x/ed/8a/6b/ed8a6b2efecc8d201c0193e68a6acf84.jpg',
-      alt: 'Modern living room setup'
+      description:
+        'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image:
+        'https://i.pinimg.com/736x/ed/8a/6b/ed8a6b2efecc8d201c0193e68a6acf84.jpg',
+      alt: 'Modern living room setup',
     },
- 
   ];
-
 
   // @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
 
@@ -139,13 +151,13 @@ export class HomeComponent implements OnInit  {
       priceRange: 'From R150',
     },
     {
-      day: '27',
+      day: '01',
       date: 'Mar 2025',
-      venue: 'LIV Nightclub',
-      location: 'Pretoria, Arcadia',
-      type: 'club',
+      venue: 'Radio Interview',
+      location: 'Channel 802, Open view 628',
+      type: 'On Air',
       image:
-        'https://i.pinimg.com/736x/4c/20/02/4c20021bf0f2fe2abb3334efadb6090b.jpg',
+        'https://i.pinimg.com/736x/2e/8d/3a/2e8d3a4bdf7915b1818138720d592f18.jpg',
       soldOut: true,
     },
     {
@@ -294,7 +306,7 @@ export class HomeComponent implements OnInit  {
       marginTop: '0px',
       aos: 'fade-right',
       aosOffset: '300',
-      aosEasing: 'ease-in-sine'
+      aosEasing: 'ease-in-sine',
     },
     {
       src: 'https://i.pinimg.com/474x/34/1b/7e/341b7e3c8ddc3ea71b610e100560c7a5.jpg',
@@ -303,7 +315,7 @@ export class HomeComponent implements OnInit  {
       marginTop: '30px',
       aos: 'fade-left',
       aosOffset: '300',
-      aosEasing: 'ease-in-sine'
+      aosEasing: 'ease-in-sine',
     },
   ];
 
@@ -317,14 +329,16 @@ export class HomeComponent implements OnInit  {
       title: 'A Re Deitane',
     },
   ];
-  
 
   nextSlide(): void {
     this.currentSlide = (this.currentSlide + 1) % this.carouselSlides.length;
   }
 
   previousSlide(): void {
-    this.currentSlide = this.currentSlide === 0 ? this.carouselSlides.length - 1 : this.currentSlide - 1;
+    this.currentSlide =
+      this.currentSlide === 0
+        ? this.carouselSlides.length - 1
+        : this.currentSlide - 1;
   }
 
   goToSlide(index: number): void {
@@ -339,11 +353,12 @@ export class HomeComponent implements OnInit  {
     return rating % 1;
   }
 
-
   currentVideo: SafeResourceUrl; // Holds the currently playing video
 
   constructor(private sanitizer: DomSanitizer) {
-    this.currentVideo = this.getSanitizedUrl(this.videos[0].src + '?autoplay=1'); // Load first video with autoplay
+    this.currentVideo = this.getSanitizedUrl(
+      this.videos[0].src + '?autoplay=1'
+    ); // Load first video with autoplay
   }
 
   // Sanitize the video URL
@@ -353,6 +368,8 @@ export class HomeComponent implements OnInit  {
 
   // Change video without refreshing the iframe
   changeVideo(index: number) {
-    this.currentVideo = this.getSanitizedUrl(this.videos[index].src + '?autoplay=1');
+    this.currentVideo = this.getSanitizedUrl(
+      this.videos[index].src + '?autoplay=1'
+    );
   }
 }
