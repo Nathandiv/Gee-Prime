@@ -45,23 +45,17 @@ export class HomeComponent implements OnInit  {
       title: 'Discover Inspired Living',
       subtitle: 'Explore Elevated Living',
       description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://i.pinimg.com/474x/d2/8e/ab/d28eabe532ef88cb044780fbfb24dafb.jpg',
+      image: 'https://cdn-images.dzcdn.net/images/artist/521e61ad6c452767a2ecb5cffc7d6f38/1900x1900-000000-80-0-0.jpg',
       alt: 'Modern living room setup'
     },
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
       description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://i.pinimg.com/474x/2a/c3/ca/2ac3cab498870520aabca9b96e0baef7.jpg',
+      image: 'https://i.pinimg.com/736x/3a/c8/f8/3ac8f87f5dfa043511b8e04ff0939644.jpg',
       alt: 'Luxury furniture showcase'
     },
-    {
-      title: 'Discover Inspired Living',
-      subtitle: 'Explore Elevated Living',
-      description: 'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
-      image: 'https://i.pinimg.com/474x/34/1b/7e/341b7e3c8ddc3ea71b610e100560c7a5.jpg',
-      alt: 'Modern living room setup'
-    },
+   
     {
       title: 'Premium Comfort',
       subtitle: 'Experience Luxury',
@@ -76,13 +70,7 @@ export class HomeComponent implements OnInit  {
       image: 'https://i.pinimg.com/736x/ed/8a/6b/ed8a6b2efecc8d201c0193e68a6acf84.jpg',
       alt: 'Modern living room setup'
     },
-    {
-      title: 'Premium Comfort',
-      subtitle: 'Experience Luxury',
-      description: 'Indulge in the perfect blend of comfort and style with our premium furniture collection. Each piece is carefully selected to bring both functionality and elegance to your living space.',
-      image: 'https://i.pinimg.com/474x/31/75/5b/31755bdb3c36236a2a7dae06df9eddc8.jpg',
-      alt: 'Luxury furniture showcase'
-    }
+ 
   ];
 
 
@@ -300,7 +288,7 @@ export class HomeComponent implements OnInit  {
 
   images = [
     {
-      src: 'https://mp3bullet.ng/wp-content/uploads/2025/02/Gee-Primes-Timeless-Confessions-Album-A-Soulful-Afro-House-Journey.jpg',
+      src: 'https://i.pinimg.com/474x/d2/8e/ab/d28eabe532ef88cb044780fbfb24dafb.jpg',
       alt: 'office content 1',
       height: '250px',
       marginTop: '0px',
@@ -309,7 +297,7 @@ export class HomeComponent implements OnInit  {
       aosEasing: 'ease-in-sine'
     },
     {
-      src: 'https://images.caxton.co.za/wp-content/uploads/sites/112/2024/03/A7403411_79617-e1709890587845.jpg',
+      src: 'https://i.pinimg.com/474x/34/1b/7e/341b7e3c8ddc3ea71b610e100560c7a5.jpg',
       alt: 'office content 2',
       height: '250px',
       marginTop: '30px',
