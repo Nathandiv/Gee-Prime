@@ -129,13 +129,13 @@ export class HomeComponent implements OnInit  {
 
   events: Event[] = [
     {
-      day: '20',
-      date: 'Mar 2025',
-      venue: 'District Nightclub',
-      location: 'Johannesburg, Rosebank',
+      day: '27',
+      date: 'April 2025',
+      venue: 'Looks Lounge',
+      location: 'Pretoria, soshanguve',
       type: 'club',
       image:
-        'https://i.pinimg.com/736x/21/e4/c5/21e4c51155be921de69e4c5bf5923474.jpg',
+        'https://i.pinimg.com/736x/fd/54/a0/fd54a020cc65e9dd8d8bccdac0192a3b.jpg',
       priceRange: 'From R150',
     },
     {
