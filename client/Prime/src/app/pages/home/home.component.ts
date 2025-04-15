@@ -161,14 +161,14 @@ export class HomeComponent implements OnInit {
       soldOut: true,
     },
     {
-      day: '28',
-      date: 'Mar 2054',
-      venue: 'Big Night Live',
-      location: 'Sandton, Sandown',
-      type: 'concert',
+      day: '17',
+      date: 'Mar 2025',
+      venue: 'Radio Interview',
+      location: 'Rhodes Music, 87.7 FM',
+      type: 'On Air',
       image:
-        'https://i.pinimg.com/736x/ab/78/26/ab782659bc06ae9eb4f14a95164e62a8.jpg',
-      priceRange: 'From R150',
+        'https://i.pinimg.com/736x/a7/a9/81/a7a9812916b050b0f6f91277e6d85cd2.jpg',
+        soldOut: true,
     },
   ];
 
