@@ -303,7 +303,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c002b;
+    /* background: #0c002b; */
   }
   
   .animated-button {
