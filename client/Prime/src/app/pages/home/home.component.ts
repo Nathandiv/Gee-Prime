@@ -20,6 +20,7 @@ interface Event {
   image: string;
   priceRange?: string;
   soldOut?: boolean;
+  href: string;
 }
 
 interface CarouselSlide {
@@ -149,6 +150,7 @@ export class HomeComponent implements OnInit {
       image:
         'https://i.pinimg.com/736x/fd/54/a0/fd54a020cc65e9dd8d8bccdac0192a3b.jpg',
       priceRange: 'From R150',
+      href: 'https://www.spotify.com/',
     },
     {
       day: '01',
@@ -159,6 +161,7 @@ export class HomeComponent implements OnInit {
       image:
         'https://i.pinimg.com/736x/2e/8d/3a/2e8d3a4bdf7915b1818138720d592f18.jpg',
       soldOut: true,
+      href: '',
     },
     {
       day: '17',
@@ -169,6 +172,7 @@ export class HomeComponent implements OnInit {
       image:
         'https://i.pinimg.com/736x/a7/a9/81/a7a9812916b050b0f6f91277e6d85cd2.jpg',
         soldOut: true,
+        href: '',
     },
   ];
 

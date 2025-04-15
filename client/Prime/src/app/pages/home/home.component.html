@@ -313,7 +313,21 @@
             </div>
           </div>
 
+<!-- 
+          <a
+          *ngFor="let event of events"
+          [href]="event.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-gray-500"
+        >
+      
+      
+      
+      </a> -->
+
           <div class="flex justify-between items-center">
+       
             <button
               [disabled]="event.soldOut"
               class="px-4 py-2 rounded-lg transition-colors"
