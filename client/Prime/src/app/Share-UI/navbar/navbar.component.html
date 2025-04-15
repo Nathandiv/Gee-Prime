@@ -6,9 +6,9 @@
     <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
       <!-- <img src="https://www.flaticon.com/authors/piksart" class="h-8" alt="Flowbite Logo" /> -->
       <span
-      data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
         class="self-center text-2xl font-semibold whitespace-nowrap text-white"
         >Prime</span
       >
@@ -47,7 +47,7 @@
       >
         <li>
           <a
-            href="#home"
+            (click)="scrollToSection('home')"
             class="block py-2 px-3 text-white border-b-2 border-transparent hover:border-white transition-all duration-300 md:p-0"
             aria-current="page"
             >Home</a
@@ -55,14 +55,14 @@
         </li>
         <li>
           <a
-            href="#about"
+            (click)="scrollToSection('about')"
             class="block py-2 px-3 text-white border-b-2 border-transparent hover:border-white transition-all duration-300 md:p-0"
             >About</a
           >
         </li>
         <li>
           <a
-            href="#music"
+          (click)="scrollToSection('music')"
             class="block py-2 px-3 text-white border-b-2 border-transparent hover:border-white transition-all duration-300 md:p-0"
             >Music</a
           >
@@ -73,7 +73,7 @@
           </li> -->
         <li>
           <a
-            href="#show"
+          (click)="scrollToSection('show')"
             class="block py-2 px-3 text-white border-b-2 border-transparent hover:border-white transition-all duration-300 md:p-0"
             >Shows</a
           >
@@ -86,7 +86,7 @@
 
         <li>
           <a
-            href="#contact"
+          (click)="scrollToSection('contact')" 
             class="block py-2 px-3 text-white border-b-2 border-transparent hover:border-white transition-all duration-300 md:p-0"
             >Contact</a
           >
