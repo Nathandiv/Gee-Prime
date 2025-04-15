@@ -16,4 +16,13 @@ export class LandingComponent {
     this.router.navigate(['/home']);
   }
 
+  isClicked = false;
+
+  handleClick(): void {
+    this.isClicked = true;
+    setTimeout(() => {
+      this.isClicked = false;
+    }, 300); // match the bounce animation duration
+  }
+
 }

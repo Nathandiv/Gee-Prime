@@ -22,16 +22,22 @@
     <p class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl">
       Real lyrics. Raw sound. Pure vibe.
     </p>
-    <a href="home">
-      <button
-        class="button-54"
-        type="button"
-        role="button"
-        (click)="goToHome()"
+    <div class="button-wrapper">
+      <a href="home">
+        <button
+        class="animated-button"
+        [class.clicked]="isClicked"
+        (click)="handleClick()"
       >
-        <span class="text">music</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Music
       </button>
     </a>
+
+    </div>
   </div>
 </div>
 
@@ -56,11 +62,23 @@
     <p class="text-gray-200 text-base md:text-l sm:text-s mb-6 max-w-xl">
       Real lyrics. Raw sound. Pure vibe.
     </p>
-    <a href="home">
-      <button class="button-54" type="button" role="button">
-        <span class="text">music</span>
-      </button>
-    </a>
+  
+      <div class="button-wrapper">
+        <a href="home">
+          <button
+          class="animated-button"
+          [class.clicked]="isClicked"
+          (click)="handleClick()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Music
+        </button>
+      </a>
+
+      </div>
   </div>
 </div>
 
