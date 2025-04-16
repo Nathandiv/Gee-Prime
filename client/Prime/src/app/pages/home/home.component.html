@@ -313,20 +313,70 @@
             </div>
           </div>
 
+
+
+          <div class="flex justify-between items-center">
+            <!-- If event is NOT sold out AND NOT in the past -->
+            <ng-container *ngIf="!event.soldOut && !isPastEvent(event); else disabledButton">
+              <a
+                [href]="event.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white"
+              >
+                <button
+                  class="px-4 py-2 rounded-lg transition-colors bg-purple-600 text-white hover:bg-purple-700"
+                >
+                  {{ event.type === 'club' ? 'RSVP Now' : 'Get Tickets' }}
+                </button>
+              </a>
+            </ng-container>
+          
+            <!-- If event IS sold out OR in the past -->
+            <ng-template #disabledButton>
+              <button
+                disabled
+                class="px-4 py-2 rounded-lg transition-colors bg-gray-400 text-white cursor-not-allowed"
+              >
+                
+      {{ isPastEvent(event) ? 'Event Ended' : 'Sold Out' }}
+              </button>
+            </ng-template>
+          </div>
+
 <!-- 
+           <div class="flex justify-between items-center">
           <a
-          *ngFor="let event of events"
+          
           [href]="event.href"
           target="_blank"
           rel="noopener noreferrer"
           class="text-white hover:text-gray-500"
         >
       
+        <button
+              [disabled]="event.soldOut"
+              class="px-4 py-2 rounded-lg transition-colors"
+              [class.bg-purple-600]="!event.soldOut"
+              [class.bg-gray-400]="event.soldOut"
+              [class.text-white]="!event.soldOut"
+              [class.cursor-not-allowed]="event.soldOut"
+            >
+              {{
+                event.soldOut
+                  ? "Sold Out"
+                  : event.type === "club"
+                  ? "RSVP Now"
+                  : "Get Tickets"
+              }}
+            </button>
       
-      
-      </a> -->
+      </a> 
 
-          <div class="flex justify-between items-center">
+        </div>
+      -->
+
+          <!-- <div class="flex justify-between items-center">
        
             <button
               [disabled]="event.soldOut"
@@ -347,7 +397,8 @@
             <span class="text-white text-sm" *ngIf="event.priceRange">
               {{ event.priceRange }}
             </span>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </div>

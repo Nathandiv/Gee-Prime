@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Event {
-  date: string;
+  date: string; // Now using full date format like '2025-04-27'
   day: string;
   venue: string;
   location: string;
@@ -22,7 +22,6 @@ interface Event {
   soldOut?: boolean;
   href: string;
 }
-
 interface CarouselSlide {
   title: string;
   subtitle: string;
@@ -143,18 +142,18 @@ export class HomeComponent implements OnInit {
   events: Event[] = [
     {
       day: '27',
-      date: 'April 2025',
+      date: '2025-04-27', // Updated to valid date string
       venue: 'Looks Lounge',
       location: 'Pretoria, soshanguve',
       type: 'club',
       image:
         'https://i.pinimg.com/736x/fd/54/a0/fd54a020cc65e9dd8d8bccdac0192a3b.jpg',
       priceRange: 'From R150',
-      href: 'https://www.spotify.com/',
+      href: 'https://computicket.com/event/itsoseng_delicious_/00121a9b-cdc1-4dcd-9198-4c87c098b201',
     },
     {
       day: '01',
-      date: 'Mar 2025',
+      date: '2025-03-01', // Updated to valid date string
       venue: 'Radio Interview',
       location: 'Channel 802, Open view 628',
       type: 'On Air',
@@ -165,17 +164,17 @@ export class HomeComponent implements OnInit {
     },
     {
       day: '17',
-      date: 'Mar 2025',
+      date: '2025-03-17',
       venue: 'Radio Interview',
       location: 'Rhodes Music, 87.7 FM',
       type: 'On Air',
       image:
         'https://i.pinimg.com/736x/a7/a9/81/a7a9812916b050b0f6f91277e6d85cd2.jpg',
-        soldOut: true,
-        href: '',
+      soldOut: true,
+      href: '',
     },
   ];
-
+  
   cards = [
     {
       imgSrc:
@@ -349,31 +348,33 @@ export class HomeComponent implements OnInit {
     this.currentSlide = index;
   }
 
-  getRatingStars(rating: number): number[] {
-    return Array(Math.floor(rating)).fill(0);
+
+  isPastEvent(event: Event): boolean {
+    const today = new Date();
+    const eventDate = new Date(event.date);
+    return eventDate < today;
   }
 
-  getPartialStar(rating: number): number {
-    return rating % 1;
-  }
+  
 
-  currentVideo: SafeResourceUrl; // Holds the currently playing video
+  // currentVideo: SafeResourceUrl; 
 
-  constructor(private sanitizer: DomSanitizer) {
-    this.currentVideo = this.getSanitizedUrl(
-      this.videos[0].src + '?autoplay=1'
-    ); // Load first video with autoplay
-  }
+  // constructor(private sanitizer: DomSanitizer) {
+  //   this.currentVideo = this.getSanitizedUrl(
+  //     this.videos[0].src + '?autoplay=1'
+  //   ); 
+  // }
 
-  // Sanitize the video URL
-  getSanitizedUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
+ 
+  // getSanitizedUrl(url: string): SafeResourceUrl {
+  //   return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  // }
 
-  // Change video without refreshing the iframe
-  changeVideo(index: number) {
-    this.currentVideo = this.getSanitizedUrl(
-      this.videos[index].src + '?autoplay=1'
-    );
-  }
+
+  // changeVideo(index: number) {
+  //   this.currentVideo = this.getSanitizedUrl(
+  //     this.videos[index].src + '?autoplay=1'
+  //   );
+  // }
+
 }
