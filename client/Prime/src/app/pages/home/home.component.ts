@@ -123,13 +123,13 @@ export class HomeComponent implements OnInit {
       imageUrl:
         'https://i.pinimg.com/474x/df/74/c3/df74c38d4de71310a2a72ac5a420cb4a.jpg',
       name: 'Apple',
-      url: 'https://music.apple.com/',
+      url: 'https://music.apple.com/za/artist/gee-prime/1489841098',
     },
     {
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg',
       name: 'YouTube',
-      url: 'https://www.youtube.com/',
+      url: 'https://youtube.com/channel/UCtLm4F6dAML8TRLw5v0cXOg?si=vYmRqJL-9cjQTW31',
     },
     // {
     //   imageUrl:
