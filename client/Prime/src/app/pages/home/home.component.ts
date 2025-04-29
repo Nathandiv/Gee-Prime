@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit {
     }, 5000);
   }
 
+
+
   currentSlide = 0;
 
   carouselSlides: CarouselSlide[] = [
