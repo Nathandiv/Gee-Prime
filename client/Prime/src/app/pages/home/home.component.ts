@@ -84,6 +84,18 @@ export class HomeComponent implements OnInit {
         'https://i.pinimg.com/736x/ed/8a/6b/ed8a6b2efecc8d201c0193e68a6acf84.jpg',
       alt: 'Modern living room setup',
     },
+
+
+       {
+      title: 'Discover Inspired Living',
+      subtitle: 'Explore Elevated Living',
+      description:
+        'Discover elevated living at its finest with TP2 Furniture Shop. Our curated collection combines timeless elegance with modern flair, offering furnishings that redefine style and comfort.',
+      image:
+        'https://i.pinimg.com/736x/ed/8a/6b/ed8a6b2efecc8d201c0193e68a6acf84.jpg',
+      alt: 'Modern living room setup',
+    },
+
   ];
 
   // @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
@@ -140,6 +152,19 @@ export class HomeComponent implements OnInit {
   ];
 
   events: Event[] = [
+
+      {
+      day: '01',
+      date: '2025-08-02', // Updated to valid date string
+      venue: 'Botanical Gardens',
+      location: 'Pretoria, 2 Cussonia Ave,',
+      type: 'festival',
+      image:
+        'https://i.pinimg.com/736x/49/49/10/494910cc29932b43151928eac52e3727.jpg',
+      soldOut: false,
+      priceRange: 'From R150',
+      href: 'https://www.howler.co.za/events/imbawula-music-festival-3fda',
+    },
     {
       day: '27',
       date: '2025-04-27', // Updated to valid date string
@@ -151,17 +176,7 @@ export class HomeComponent implements OnInit {
       priceRange: 'From R150',
       href: 'https://computicket.com/event/itsoseng_delicious_/00121a9b-cdc1-4dcd-9198-4c87c098b201',
     },
-    {
-      day: '01',
-      date: '2025-03-01', // Updated to valid date string
-      venue: 'Radio Interview',
-      location: 'Channel 802, Open view 628',
-      type: 'On Air',
-      image:
-        'https://i.pinimg.com/736x/2e/8d/3a/2e8d3a4bdf7915b1818138720d592f18.jpg',
-      soldOut: true,
-      href: '',
-    },
+  
     {
       day: '17',
       date: '2025-03-17',
