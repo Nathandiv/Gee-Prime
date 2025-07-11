@@ -10,6 +10,7 @@ import { NavbarComponent } from '../../Share-UI/navbar/navbar.component';
 import { FooterComponent } from '../../Share-UI/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { FormsModule, NgForm } from '@angular/forms';
 
 interface Event {
   date: string; // Now using full date format like '2025-04-27'
@@ -33,7 +34,7 @@ interface CarouselSlide {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, CommonModule],
+  imports: [NavbarComponent, FooterComponent, CommonModule,FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -370,6 +371,39 @@ export class HomeComponent implements OnInit {
     return eventDate < today;
   }
 
+
+   success = false;
+
+  async submitForm(form: NgForm) {
+    if (form.invalid) return;
+
+    const formData = new FormData();
+    formData.append('access_key', '18155a87-df5c-4465-b923-8cb64eb3e1b3');
+    formData.append('subject', 'New Subscriber');
+    formData.append('from_name', 'Website Footer');
+    formData.append('email', form.value.email);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+      console.log('Subscription response:', result);
+
+      if (result.success) {
+        this.success = true;
+        form.resetForm();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert(` Subscription failed: ${result.message}`);
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('Network error. Please try again later.');
+    }
+  }
   
 
   // currentVideo: SafeResourceUrl; 
