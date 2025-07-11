@@ -532,52 +532,79 @@
     <div class="mt-6">
       <h3 class="text-lg font-semibold text-gray-400">EMAIL UPDATES</h3>
       <div class="flex flex-col md:flex-row justify-center items-center mt-2">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="w-full flex justify-center items-center"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="18155a87-df5c-4465-b923-8cb64eb3e1b3"
-          />
-          <div
-            class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md w-full p-4"
-          >
-            <div class="relative w-full sm:w-2/3">
-              <input
-                type="email"
-                name="email"
-                placeholder=" mail@example.com"
-                class="w-full appearance-none rounded-lg shadow-md p-3 pl-10 text-gray-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                style="height: 40px"
-                required
-                aria-label="Email address"
-              />
-              <svg
-                class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2.5 4a2.5 2.5 0 014.662-1.125L10 5.528l2.838-2.653A2.5 2.5 0 1117.5 4v12a2.5 2.5 0 01-4.662 1.125L10 14.472l-2.838 2.653A2.5 2.5 0 012.5 16V4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <button
-              type="submit"
-              class="sm:w-1/3 bg-purple-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 mt-3 sm:mt-0"
-              style="height: 40px; width: 115px"
-            >
-              Subscribe
-            </button>
-          </div>
-        </form>
+      <!-- ✅ Success Message -->
+
+
+<form
+  #emailForm="ngForm"
+  (ngSubmit)="submitForm(emailForm)"
+  class="w-full flex flex-col items-center"
+  novalidate
+>
+  <!-- Flex container for input and button -->
+  <div
+    class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md w-full p-4"
+  >
+    <!-- Hidden Web3Forms Access Key -->
+    <input
+      type="hidden"
+      name="access_key"
+      value="18155a87-df5c-4465-b923-8cb64eb3e1b3"
+    />
+
+    <!-- Email Input -->
+    <div class="relative w-full sm:w-2/3">
+      <input
+        type="email"
+        name="email"
+        ngModel
+        required
+        placeholder="mail@example.com"
+        class="w-full appearance-none rounded-lg shadow-md p-3 pl-10 text-gray-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        style="height: 40px"
+        aria-label="Email address"
+      />
+      <svg
+        class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 4a2.5 2.5 0 014.662-1.125L10 5.528l2.838-2.653A2.5 2.5 0 1117.5 4v12a2.5 2.5 0 01-4.662 1.125L10 14.472l-2.838 2.653A2.5 2.5 0 012.5 16V4z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+
+    <!-- Subscribe Button -->
+    <button
+      type="submit"
+      [disabled]="emailForm.invalid"
+      class="sm:w-1/3 bg-purple-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 mt-3 sm:mt-0"
+      style="height: 40px; width: 115px"
+    >
+      Subscribe
+    </button>
+  </div>
+
+  <!-- ✅ Success Message BELOW the form content -->
+  <div
+    *ngIf="success"
+    class="text-purple-600  p-2 mt-2 rounded text-sm text-center w-full max-w-md"
+  >
+    ✅ You’ve successfully subscribed!
+  </div>
+</form>
+
+
+
+
+
+        
+
       </div>
     </div>
   </div>
