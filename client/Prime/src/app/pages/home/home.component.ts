@@ -378,7 +378,7 @@ export class HomeComponent implements OnInit {
     if (form.invalid) return;
 
     const formData = new FormData();
-    formData.append('access_key', '18155a87-df5c-4465-b923-8cb64eb3e1b3');
+    formData.append('access_key', '09fab436-101e-409e-976b-c88c17a97cd2');
     formData.append('subject', 'New Subscriber');
     formData.append('from_name', 'Website Footer');
     formData.append('email', form.value.email);
