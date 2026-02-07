@@ -35,9 +35,9 @@
     <!-- Main centered content -->
     <div class="flex-grow flex flex-col items-center justify-center space-y-4 md:space-y-6">
 <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem]
-           font-['Oswald'] font-bold uppercase tracking-[0.03em] lg:tracking-[0.06em]
+           font-thin whitespace-nowrap text-white uppercase tracking-[0.03em] lg:tracking-[0.06em]
            leading-[0.80] text-white">
-  GEE<br>PRIME
+  GEE<br><span class="text-amber-400 font-thin ">PRIME</span>
 </h1>
 
       <p class="text-xl md:text-2xl lg:text-3xl font-light italic text-gray-200">
@@ -48,23 +48,23 @@
     <!-- Bottom platform icons -->
     <div class="flex gap-8 md:gap-12 mb-8 md:mb-12 pointer-events-auto">
       <!-- Spotify -->
-      <a href="#" target="_blank" aria-label="Spotify" class="hover:text-green-400 transition-colors">
-        <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewBox="0 0 24 24">
+      <a href="https://open.spotify.com/artist/0GNcLuKnpfCagq8Hya0m6P?si=i9pRTbwIQHm4QTRqsiPB8A'" target="_blank" aria-label="Spotify" class="hover:text-amber-400 transition-colors">
+        <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.487 17.302c-.218.351-.693.463-1.043.246-2.857-1.75-6.454-2.145-10.69-1.171-.404.091-.785-.167-.876-.567-.092-.4.167-.785.566-.876 4.53-1.043 8.494-.591 11.637 1.335.35.218.463.692.246 1.033zm1.498-3.234c-.276.451-.864.59-1.315.314-3.275-1.998-8.267-2.58-12.154-1.41-.51.148-1.037-.142-1.186-.655-.148-.511.142-1.037.654-1.186 4.34-1.258 9.802-.615 13.499 1.604.45.276.589.863.314 1.313zm.111-3.513c-3.77-2.241-9.984-2.448-13.451-1.334-.6.184-1.237-.154-1.421-.755-.185-.601.154-1.237.755-1.422 3.947-1.212 10.648-.962 15.055 1.534.544.324.72 1.03.396 1.574-.323.543-1.03.72-1.574.396z"/>
         </svg>
       </a>
 
       <!-- Apple Music -->
-      <a href="#" target="_blank" aria-label="Apple Music" class="hover:text-red-400 transition-colors">
-        <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewBox="0 0 24 24">
+      <a href="https://music.apple.com/za/artist/gee-prime/1489841098" target="_blank" aria-label="Apple Music" class="hover:text-amber-400 transition-colors">
+        <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24">
           <path d="M16.365 1.43c-.883.52-1.69 1.333-2.16 2.21-.51.943-.805 2.005-.715 3.095 1.149.05 2.27-.43 3.155-1.03.839-.57 1.568-1.325 2.065-2.215.526-.916.825-1.917.75-2.94-.992.05-2.02.506-2.905 1.03zM21.425 19.11c-.82 1.2-1.67 2.37-2.885 2.39-1.28.02-1.69-.77-3.14-.77-1.45 0-1.91.75-3.12.79-1.25.05-2.22-1.29-3.06-2.48-1.67-2.36-2.94-6.68-1.23-9.59.85-1.45 2.37-2.38 4.01-2.4 1.18-.02 2.31.81 3.13.81.76 0 2.14-.98 3.61-.84.61.02 2.33.25 3.44 1.91-.09.06-2.05 1.2-2.03 3.6.02 2.87 2.48 3.83 2.51 3.85-.06.18-.39 1.35-1.13 2.61z"/>
           <circle cx="12" cy="12" r="3"/>
         </svg>
       </a>
 
       <!-- YouTube -->
-      <a href="#" target="_blank" aria-label="YouTube" class="hover:text-red-500 transition-colors">
-        <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewBox="0 0 24 24">
+      <a href="https://youtube.com/channel/UCtLm4F6dAML8TRLw5v0cXOg?si=vYmRqJL-9cjQTW31" target="_blank" aria-label="YouTube" class="hover:text-amber-400 transition-colors">
+        <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24">
           <path d="M23.498 6.186c-.27-1.018-1.07-1.813-2.087-2.087C19.23 3.5 12 3.5 12 3.5s-7.23 0-9.412.599c-1.018.274-1.818 1.069-2.087 2.087C0 8.368 0 12 0 12s0 3.632.501 5.814c.27 1.018 1.07 1.813 2.087 2.087C4.77 20.5 12 20.5 12 20.5s7.23 0 9.412-.599c1.018-.274 1.818-1.069 2.087-2.087C24 15.632 24 12 24 12s0-3.632-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           <polygon points="10 15 15 12 10 9" fill="#fff"/>
         </svg>
@@ -76,7 +76,7 @@
   <!-- Navigation arrows – fixed -->
   <button
     (click)="previousSlide()"
-    class="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-r-lg shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 z-30"
+    class="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-r-lg shadow-md hover:bg-amber-400 hover:text-white transition-all duration-300 z-30"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -85,7 +85,7 @@
 
   <button
     (click)="nextSlide()"
-    class="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-l-lg shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 z-30"
+    class="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-l-lg shadow-md hover:bg-amber-400 hover:text-white transition-all duration-300 z-30"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -99,7 +99,7 @@
       (click)="goToSlide(i)"
       [class]="
         'w-2 h-2 rounded-full transition-all duration-300 ' +
-        (currentSlide === i ? 'bg-purple-600 w-8' : 'bg-white hover:bg-purple-400')
+        (currentSlide === i ? 'bg-amber-400 w-8' : 'bg-white hover:bg-amber-400')
       "
     ></button>
   </div>
