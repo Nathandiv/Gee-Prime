@@ -194,7 +194,7 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       imgSrc:
-        'https://cdn-images.dzcdn.net/images/cover/3a92e0b716ef8e0dcfa06b354d02e9fe/1900x1900-000000-80-0-0.jpg',
+        'https://i.pinimg.com/736x/3b/9a/b1/3b9ab194ba6da4228969ca9f50307e8a.jpg',
       // imgWidth: ,
       imgHeight: 350,
       links: [
@@ -220,7 +220,7 @@ export class HomeComponent implements OnInit {
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qauq6cr0ZIxiceynAX5bfWffOaQK26Gglg&s476/250/300',
+        'https://cdn-images.dzcdn.net/images/cover/3a92e0b716ef8e0dcfa06b354d02e9fe/1900x1900-000000-80-0-0.jpg',
       imgHeight: 150,
       links: [
         {
