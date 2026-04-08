@@ -161,7 +161,7 @@ export class HomeComponent implements OnInit {
       location: 'Pretoria, soshanguve',
       type: 'festival',
       image:
-        'https://i.pinimg.com/736x/74/de/15/74de15c1897b6cdc8bf1d02e1849a1b2.jpg',
+        'https://computicket-boxoffice-media.s3.af-south-1.amazonaws.com/media-library/59602/conversions/7XRl6XECBTeYytQOtsmAYepRcbjirA-metaMTAyNDUyODEtZWNmYS00NDFhLWE1MmYtOGFlM2U3NDI2NDdiLmpwZWc%3D--detail-webp.webp',
       soldOut: false,
       href: 'https://computicket-boxoffice.com/e/itsoseng-delicious-6meCKN',
     },
