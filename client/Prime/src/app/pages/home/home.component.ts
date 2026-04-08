@@ -155,6 +155,18 @@ export class HomeComponent implements OnInit {
   events: Event[] = [
 
       {
+      day: '26',
+      date: '2026-04-26',
+      venue: 'Looks Lounge',
+      location: 'Pretoria, soshanguve',
+      type: 'festival',
+      image:
+        'https://i.pinimg.com/736x/74/de/15/74de15c1897b6cdc8bf1d02e1849a1b2.jpg',
+      soldOut: false,
+      href: 'https://computicket-boxoffice.com/e/itsoseng-delicious-6meCKN',
+    },
+
+      {
       day: '01',
       date: '2025-08-02', // Updated to valid date string
       venue: 'Botanical Gardens',
@@ -178,17 +190,7 @@ export class HomeComponent implements OnInit {
       href: 'https://computicket.com/event/itsoseng_delicious_/00121a9b-cdc1-4dcd-9198-4c87c098b201',
     },
   
-    {
-      day: '17',
-      date: '2025-03-17',
-      venue: 'Radio Interview',
-      location: 'Rhodes Music, 87.7 FM',
-      type: 'On Air',
-      image:
-        'https://i.pinimg.com/736x/a7/a9/81/a7a9812916b050b0f6f91277e6d85cd2.jpg',
-      soldOut: true,
-      href: '',
-    },
+  
   ];
   
   cards = [
